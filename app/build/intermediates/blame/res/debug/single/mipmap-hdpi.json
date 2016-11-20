@@ -2,5 +2,9 @@
     {
         "merged": "C:\\Users\\Charith\\Documents\\SimpleExpenseManager-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
         "source": "C:\\Users\\Charith\\Documents\\SimpleExpenseManager-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Charith\\Music\\Git\\SimpleExpenseManager\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Charith\\Music\\Git\\SimpleExpenseManager\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
 ]

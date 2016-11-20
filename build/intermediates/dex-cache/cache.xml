@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Charith\Music\Git\SimpleExpenseManager\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\Charith\Music\Git\SimpleExpenseManager\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_7b396d9e4d3805eb0add68cdd2525ded352d76d2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Charith\Music\Git\SimpleExpenseManager\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\Charith\Music\Git\SimpleExpenseManager\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_83c251ac1ba51d38117844e3bdd13c98a2ed2b6e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Charith\Music\Git\SimpleExpenseManager\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\Charith\Music\Git\SimpleExpenseManager\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.1_ba7ef51a97e379f3f7807d04176002d9ec476f01.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Charith\Music\Git\SimpleExpenseManager\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\Charith\Music\Git\SimpleExpenseManager\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_605e25893bbb85e83d50d8d513639d4e86963ed8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Charith\Music\Git\SimpleExpenseManager\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\Charith\Music\Git\SimpleExpenseManager\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_fc99d20caf87bb19b65cbd2bca42e2fc80b3267d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Charith\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\Charith\Music\Git\SimpleExpenseManager\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_223986266f4eff7b4e06d9d6d5874eaade3af3fb.jar" />
+    </item>
+
+</items>
