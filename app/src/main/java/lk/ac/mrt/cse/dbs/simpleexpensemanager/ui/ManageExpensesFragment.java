@@ -18,6 +18,7 @@ package lk.ac.mrt.cse.dbs.simpleexpensemanager.ui;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.renderscript.Double2;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -30,9 +31,11 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.R;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.control.ExpenseManager;
+import lk.ac.mrt.cse.dbs.simpleexpensemanager.control.exception.BalanceNegativeException;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.exception.InvalidAccountException;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.ExpenseType;
 
@@ -87,6 +90,10 @@ public class ManageExpensesFragment extends Fragment implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.submit_amount:
+                if (accountSelector.getSelectedItem() == null){
+                    Toast.makeText(getActivity(),"Please select an account before logging a transaction",Toast.LENGTH_SHORT).show();
+                    break;
+                }
                 String selectedAccount = (String) accountSelector.getSelectedItem();
                 String amountStr = amount.getText().toString();
                 RadioButton checkedType = (RadioButton) getActivity().findViewById(expenseTypeGroup
@@ -99,12 +106,18 @@ public class ManageExpensesFragment extends Fragment implements View.OnClickList
 
                 if (amountStr.isEmpty()) {
                     amount.setError(getActivity().getString(R.string.err_amount_required));
+                    break;
                 }
-
+                if(Double.parseDouble(amountStr) <= 0) {
+                    amount.setError("Amount should be greater than 0");
+                    break;
+                }
                 if (currentExpenseManager != null) {
                     try {
                         currentExpenseManager.updateAccountBalance(selectedAccount, day, month, year,
                                 ExpenseType.valueOf(type.toUpperCase()), amountStr);
+                        Toast.makeText(getActivity(), "Transaction logged successfully", Toast.LENGTH_SHORT).show();
+                        amount.getText().clear();
                     } catch (InvalidAccountException e) {
                         new AlertDialog.Builder(this.getActivity())
                                 .setTitle(this.getString(R.string.msg_account_update_unable) + selectedAccount)
@@ -116,10 +129,21 @@ public class ManageExpensesFragment extends Fragment implements View.OnClickList
                                         dialog.cancel();
                                     }
                                 }).setIcon(android.R.drawable.ic_dialog_alert).show();
+                    } catch (BalanceNegativeException e) {
+                        new AlertDialog.Builder(this.getActivity())
+                                .setTitle("Balance cannot be negative")
+                                .setMessage(e.getMessage())
+                                .setNeutralButton(this.getString(R.string.msg_ok),
+                                        new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                dialog.cancel();
+                                            }
+                                        }).setIcon(android.R.drawable.ic_dialog_alert).show();
+                        amount.setError("Should be smaller than account balance");
                     }
+                    break;
                 }
-                amount.getText().clear();
-                break;
         }
     }
 }
